@@ -1,19 +1,17 @@
-# rvdb 0.1
+This repository contains radial velocity datasets that have been published in peer-reviewed literature.
 
-## What it is
-**rvdb** is a repository of the radial velocity datasets that have been published in peer-reviewed literature, and will be the default set of data that is distributed with [Systemic](http://www.stefanom.org/systemic). The repository is browsable online at http://www.rvdb.io, and is easily downloadable in its entirety with git:
+**Note**: Check the data carefully before using it for scientific work. If you notice any issues with one of the datasets, please do a pull request on this repository or [file an issue](https://github.com/j-faria/rvdb/issues).
 
-```
-git clone https://github.com/stefano-meschiari/rvdb.git
-```
-or by downloading the [.tar.gz archive](https://github.com/stefano-meschiari/rvdb/raw/master/rvdb.tar.gz).
 
-**Note**: This database is currently in a pre-release version. Please check the data carefully before using it for scientific work. If you notice any issues with one of the datasets, please do a pull request on this repository, [file a bug](https://github.com/stefano-meschiari/rvdb/issues), or [drop me a line](http://www.stefanom.org).
+The repository is structured as a collection of plain-text files. 
+Each star has an associated file with extension .sys (system); 
+this file contains a few stellar parameters and references to the radial velocity files associated with the star.
 
-## What it contains
-The repository is structured as a collection of plain-text files that can easily be imported in [Systemic](http://www.stefanom.org/systemic) or any other analysis program. Each star is associated with a file with extension .sys (system); this file contains a few stellar parameters and references to the radial velocity files associated with the star.
-
-Each star can be associated with multiple radial velocity files with extension .vels (velocities). The header of .vels files contain some information about the telescope and instrument that were used to gather the data, and a reference to the paper where the RV tables were published. The rest of the .vels files is a whitespace-separated file containing at least three columns: time of observation in JD, RV measurement in m/s and uncertainty on the RV measurement, e.g.:
+Each star can be associated with multiple radial velocity files with extension .vels (velocities). 
+The header of .vels files contains information about the telescope and instrument used to gather the data, 
+and a reference to the paper where the RVs were published. 
+After this header, each .vels file contains the data in at least three whitespace-separated columns: 
+time of observation in JD, RV measurement in m/s and uncertainty on the RV measurement in m/s, e.g.:
 
 ```
 # telescope = 9.2M HOBBY EBERLY TELESCOPE (HET)
@@ -28,7 +26,12 @@ Each star can be associated with multiple radial velocity files with extension .
   ...
 ```
 
-The meaning of any other additional columns is specified in the .vels file.
+The meaning of any other additional columns is also specified in the .vels file.
+
 
 ## Where does the data come from?
-The initial release of the database (01/30/15) contains data originally hosted on the [NASA Exoplanet Archive](http://exoplanetarchive.ipac.caltech.edu), cleaned up and with duplicate datasets removed. Any data added after that date was pulled from published peer-reviewed papers.
+The initial release of the database, created by Stefano Meschiari on 01/30/15, contained data originally hosted on the [NASA Exoplanet Archive](http://exoplanetarchive.ipac.caltech.edu), cleaned up and with duplicate datasets removed. Any data added after that date was pulled from published peer-reviewed papers.
+
+
+
+Based on: [stefano-meschiari/rvdb](https://github.com/stefano-meschiari/rvdb)
